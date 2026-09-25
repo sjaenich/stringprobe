@@ -23,14 +23,12 @@ ENV CLASSPATH=${JAVA_DEV_ROOT}/classes:${JAVA_DEV_ROOT}/bin/junit.jar:${JAVA_DEV
 WORKDIR /opt/artifact
 COPY requirements.lock ./
 RUN python -m pip install --no-cache-dir --require-hashes -r requirements.lock
-COPY sources.lock.json SHA256SUMS ./
 COPY string-probe/ ./string-probe/
 # This branch has no installable root package. Expose its actual package name.
-RUN sha256sum --check --quiet SHA256SUMS \
-    && ln -sfn compiler-provenance string-probe/compiler_provenance \
-    && mkdir -p string-probe/superc/classes \
-    && make -C string-probe/superc configure \
-    && make -C string-probe/superc
+RUN ln -sfn compiler-provenance string-probe/compiler_provenance \
+    && mkdir -p string-probe/superc/classes
+RUN make -C string-probe/superc configure
+RUN make -C string-probe/superc
 COPY artifact/ ./artifact/
 COPY configs/ ./configs/
 COPY downloads/ ./downloads/

@@ -147,7 +147,8 @@ See README.md for source locations, run commands, and required inputs.""")
         seed = int(os.environ.get("ARTIFACT_SEED", "0"))
         random.seed(seed)
         Path("/results/run-metadata.json").write_text(json.dumps({
-            "module": module, "seed": seed, "sources": json.loads((ROOT / "sources.lock.json").read_text()),
+            "module": module, "seed": seed, "sources": (json.loads((ROOT / "sources.lock.json").read_text())
+                        if (ROOT / "sources.lock.json").is_file() else None),
             "python": sys.version,
         }, indent=2) + "\n")
         # Keep the upstream multiprocessing behavior. Its worker random state
