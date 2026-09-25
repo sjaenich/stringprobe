@@ -1,0 +1,20 @@
+[
+  {
+    "directory": "string-probe/feature-tests",
+    "url": "https://github.com/sjaenich/feature-tests",
+    "ref": "main",
+    "commit": "33dfce16ca79f6cebe800ecbcaa576152deec9f3"
+  },
+  {
+    "directory": "string-probe/compiler-provenance",
+    "url": "https://github.com/sjaenich/compiler-provenance",
+    "ref": "macro-string",
+    "commit": "f0331eda37869bd7e6b74b564dd3e35f6c34d042"
+  },
+  {
+    "directory": "string-probe/superc",
+    "url": "https://github.com/sjaenich/superc",
+    "ref": "superc-strings-macro",
+    "commit": "478852620f3b2654c35ab85f94ac1f40fdd55e9a"
+  }
+]

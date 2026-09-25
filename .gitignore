@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+/results/
+/workspace/
+/*.tar.gz
+# Do not ignore build/: string-probe/feature-tests/build contains required source.

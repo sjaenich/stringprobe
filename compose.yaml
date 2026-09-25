@@ -1,0 +1,11 @@
+services:
+  artifact:
+    platform: linux/amd64
+    build: .
+    image: feature-provenance-artifact:paper
+    volumes:
+      - workspace:/workspaces/RevEng
+      - results:/results
+volumes:
+  workspace:
+  results:

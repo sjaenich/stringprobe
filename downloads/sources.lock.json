@@ -1,0 +1,12 @@
+[
+  {
+    "file": "buildroot-2025.02.4.tar.xz",
+    "url": "https://buildroot.org/downloads/buildroot-2025.02.4.tar.xz",
+    "sha256": "5fe17c825277cec851986bf61f4277e602b6e605f853645e220edd024fff3f78"
+  },
+  {
+    "file": "curl-7.71.1.tar.xz",
+    "url": "https://curl.se/download/curl-7.71.1.tar.xz",
+    "sha256": "40f83eda27cdbeb25cd4da48cefb639af1b9395d6026d2da1825bf059239658c"
+  }
+]
